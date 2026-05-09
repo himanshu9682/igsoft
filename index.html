@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Primary SEO -->
+    <title>iGsoft | Premium Web Development, SEO & Digital Agency India</title>
+    <meta name="description" content="iGsoft is a premium digital agency in India specialising in web development, app development, UI/UX design, SEO services, and CRM automation. We build fast, scalable, conversion-focused digital products that grow your business." />
+    <meta name="keywords" content="web development agency India, SEO services, UI UX design, app development, digital marketing agency, CRM automation, Next.js development, React development, website design India, iGsoft" />
+    <meta name="author" content="iGsoft" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://igsoft.studio/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:site_name"   content="iGsoft" />
+    <meta property="og:title"       content="iGsoft | Premium Web Development, SEO & Digital Agency India" />
+    <meta property="og:description" content="Premium web development, SEO, UI/UX design, and app development agency. We build future-ready digital products engineered for speed, growth, and serious polish." />
+    <meta property="og:url"         content="https://igsoft.studio/" />
+    <meta property="og:image"       content="https://igsoft.studio/ig-logo.png" />
+    <meta property="og:image:alt"   content="iGsoft — Premium Digital Agency" />
+    <meta property="og:locale"      content="en_IN" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="iGsoft | Premium Web Development, SEO & Digital Agency India" />
+    <meta name="twitter:description" content="Premium web development, SEO, UI/UX design, and app development agency. Future-ready digital products engineered for growth." />
+    <meta name="twitter:image"       content="https://igsoft.studio/ig-logo.png" />
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "iGsoft",
+      "url": "https://igsoft.studio",
+      "logo": "https://igsoft.studio/ig-logo.png",
+      "description": "Premium digital agency specialising in web development, SEO, UI/UX design, app development, and CRM automation.",
+      "email": "hello@igsoft.studio",
+      "sameAs": [
+        "https://www.instagram.com/",
+        "https://www.linkedin.com/"
+      ],
+      "serviceArea": { "@type": "Country", "name": "India" },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Digital Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Development" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO Services" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UI/UX Design" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "App Development" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "CRM Automation" } }
+        ]
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="ig-logo.png" />
+  </head>
+  <body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <div class="preloader-inner">
+        <div class="preloader-logo">
+          <img src="ig-logo.png" alt="iGsoft" class="preloader-logo-img" />
+        </div>
+        <div class="preloader-bar"><div class="preloader-fill" id="preloaderFill"></div></div>
+        <span class="preloader-pct" id="preloaderPct">0%</span>
+      </div>
+    </div>
+
+    <header class="site-header" id="top">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#hero" aria-label="iGsoft home">
+          <img src="ig-logo.png" alt="iGsoft" class="brand-logo" />
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-links"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#story">Story</a>
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#insights">Why Us</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <button class="button button-ghost nav-cta" id="navProjectBtn" type="button">Start a Project</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="hero" aria-label="Hero — iGsoft Digital Agency">
+        <!-- animated canvas grid -->
+        <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+
+        <!-- radial glow orbs -->
+        <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
+
+        <!-- vignette overlay -->
+        <div class="hero-vignette" aria-hidden="true"></div>
+
+        <div class="hero-inner shell">
+
+          <h1 class="hero-title">
+            We Build Digital
+            <span class="hero-title-gradient">Systems</span>
+            That Scale
+          </h1>
+
+          <p class="hero-sub">
+            Premium web development, SEO services, app development &amp; growth technology — engineered for speed,
+            security, and serious polish.
+          </p>
+
+          <div class="hero-cta">
+            <button class="button button-primary hero-btn-primary" id="heroProjectBtn" type="button">
+              Start a Project
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <a class="button button-ghost" href="#work">View Our Work</a>
+          </div>
+
+          <!-- floating stat cards -->
+          <div class="hero-cards">
+            <div class="hero-card">
+              <div class="hero-card-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <strong data-count="150">150+</strong>
+              <span>Projects Delivered</span>
+            </div>
+            <div class="hero-card">
+              <div class="hero-card-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <strong data-count="3">3x</strong>
+              <span>Avg. Growth Lift</span>
+            </div>
+            <div class="hero-card">
+              <div class="hero-card-icon">
+                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <strong data-count="24">24h</strong>
+              <span>Response Time</span>
+            </div>
+            <div class="hero-card">
+              <div class="hero-card-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <strong data-count="98">98%</strong>
+              <span>Client Satisfaction</span>
+            </div>
+          </div>
+
+          <!-- tech stack ticker -->
+          <div class="hero-ticker" aria-hidden="true">
+            <div class="hero-ticker-track">
+              <span>React</span><span>Next.js</span><span>Node.js</span><span>AWS</span>
+              <span>Figma</span><span>GSAP</span><span>Python</span><span>MongoDB</span>
+              <span>Tailwind</span><span>GraphQL</span><span>Docker</span><span>Vercel</span>
+              <span>React</span><span>Next.js</span><span>Node.js</span><span>AWS</span>
+              <span>Figma</span><span>GSAP</span><span>Python</span><span>MongoDB</span>
+              <span>Tailwind</span><span>GraphQL</span><span>Docker</span><span>Vercel</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+          <span class="scroll-line"></span>
+          <span class="scroll-text">Scroll to explore</span>
+        </div>
+      </section>
+
+      <section class="ap" id="story" aria-label="Our Process">
+
+        <div class="ap-intro shell">
+          <p class="eyebrow">Our Process</p>
+          <h2 class="ap-title">Four steps.<br>One seamless system.</h2>
+          <p class="ap-lead">Every phase of our web development and SEO process is engineered for precision, speed, and lasting business impact.</p>
+        </div>
+
+        <div class="ap-row" data-ap>
+          <div class="ap-media">
+            <img src="https://picsum.photos/seed/igsoft-scene-one/1400/900" alt="Architecture" width="1400" height="900" loading="lazy" decoding="async" />
+          </div>
+          <div class="ap-copy shell">
+            <span class="ap-step">01</span>
+            <h3>We Architect</h3>
+            <p>We map the system before we design the screen. User journeys, data flow, SEO architecture, integrations, and performance goals are all planned before a single pixel is drawn.</p>
+            <ul class="ap-tags">
+              <li>UX Strategy</li><li>SEO Architecture</li><li>API Flow</li><li>Analytics</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ap-row ap-row-flip" data-ap>
+          <div class="ap-media">
+            <img src="https://picsum.photos/seed/igsoft-scene-two/1400/900" alt="Engineering" width="1400" height="900" loading="lazy" decoding="async" />
+          </div>
+          <div class="ap-copy shell">
+            <span class="ap-step">02</span>
+            <h3>We Engineer</h3>
+            <p>Clean front-end code, CMS integrations, app workflows, and automation layers keep the business moving long after launch day.</p>
+            <ul class="ap-tags">
+              <li>Responsive UI</li><li>CMS</li><li>APIs</li><li>Automation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ap-row" data-ap>
+          <div class="ap-media">
+            <img src="https://picsum.photos/seed/igsoft-scene-three/1400/900" alt="Deployment" width="1400" height="900" loading="lazy" decoding="async" />
+          </div>
+          <div class="ap-copy shell">
+            <span class="ap-step">03</span>
+            <h3>We Deploy</h3>
+            <p>Tracking, content, speed checks, SEO readiness, and conversion paths are all aligned before the site meets real traffic.</p>
+            <ul class="ap-tags">
+              <li>QA Testing</li><li>Analytics</li><li>SEO</li><li>Reporting</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ap-row ap-row-flip" data-ap>
+          <div class="ap-media">
+            <img src="https://picsum.photos/seed/igsoft-scene-four/1400/900" alt="Scale" width="1400" height="900" loading="lazy" decoding="async" />
+          </div>
+          <div class="ap-copy shell">
+            <span class="ap-step">04</span>
+            <h3>We Scale</h3>
+            <p>Ongoing experimentation, SEO compounding, and content systems turn premium design into long-term, compounding business lift.</p>
+            <ul class="ap-tags">
+              <li>SEO Growth</li><li>CRO</li><li>Retention</li><li>Reputation</li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="services" id="services" aria-label="Our Services">
+        <div class="shell services-layout">
+          <div class="services-intro">
+            <p class="eyebrow">Services</p>
+            <h2>One strategic digital partner for web development, SEO, design &amp; growth.</h2>
+            <p>
+              From SEO services and web development to UI/UX design and app development — explore our full service stack and see how we shape outcomes.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <div class="services-nav" role="tablist" aria-label="Service categories">
+              <button class="service-trigger is-active" type="button" data-service="seo">
+                SEO Services
+              </button>
+              <button class="service-trigger" type="button" data-service="web">
+                Web Development
+              </button>
+              <button class="service-trigger" type="button" data-service="uiux">
+                UI/UX Design
+              </button>
+              <button class="service-trigger" type="button" data-service="content">
+                Content Marketing
+              </button>
+              <button class="service-trigger" type="button" data-service="app">
+                App Development
+              </button>
+              <button class="service-trigger" type="button" data-service="reputation">
+                Reputation
+              </button>
+            </div>
+
+            <article class="service-panel" aria-live="polite">
+              <div class="service-panel-media">
+                <img
+                  id="service-image"
+                  src="https://picsum.photos/seed/igsoft-seo/1200/800"
+                  alt="SEO Services"
+                  width="1200"
+                  height="800"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+
+              <div class="service-panel-body">
+                <p class="service-label" id="service-label">SEO Services</p>
+                <h3 id="service-title">Search visibility engineered for compounding growth.</h3>
+                <p class="service-description" id="service-description">
+                  Technical audits, content architecture, and conversion-aware optimization help the
+                  right audience find you and stay engaged.
+                </p>
+
+                <div class="service-metrics" id="service-metrics"></div>
+                <div class="service-tags" id="service-tags"></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-showcase" id="features" aria-label="Featured Capabilities">
+        <div class="shell section-heading section-heading-tight">
+          <p class="eyebrow">Featured capabilities</p>
+          <h2>Web development, app automation &amp; SEO growth infrastructure — with a premium product feel.</h2>
+        </div>
+
+        <div class="feature-row shell">
+          <div class="feature-copy">
+            <p class="feature-kicker">Web platforms</p>
+            <h3>Business websites that behave like modern software.</h3>
+            <p>
+              We combine premium UI, clean code, SEO structure, and conversion systems so your site
+              becomes a working business engine.
+            </p>
+            <ul class="feature-list">
+              <li>CMS-ready front-end architecture</li>
+              <li>SEO and performance foundation</li>
+              <li>Conversion-focused interface systems</li>
+            </ul>
+          </div>
+          <div class="feature-media">
+            <img
+              src="https://picsum.photos/seed/igsoft-feature-one/1200/800"
+              alt="Premium website experience"
+              width="1200"
+              height="800"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+
+        <div class="feature-row feature-row-reverse shell">
+          <div class="feature-copy">
+            <p class="feature-kicker">Apps and automation</p>
+            <h3>Internal tools, apps, and workflows built to save time.</h3>
+            <p>
+              From dashboards to lead systems, we turn repetitive work into clear digital workflows
+              your team can actually use.
+            </p>
+            <ul class="feature-list">
+              <li>CRM and lead-flow automation</li>
+              <li>Dashboard and admin interfaces</li>
+              <li>API-connected business workflows</li>
+            </ul>
+          </div>
+          <div class="feature-media">
+            <img
+              src="https://picsum.photos/seed/igsoft-feature-two/1200/800"
+              alt="Application user interface"
+              width="1200"
+              height="800"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+
+        <div class="feature-row shell">
+          <div class="feature-copy">
+            <p class="feature-kicker">Growth technology</p>
+            <h3>Marketing systems backed by data, SEO, and automation.</h3>
+            <p>
+              We treat growth as a design discipline, combining analytics, experimentation, and
+              reputation strategy into a single operating rhythm.
+            </p>
+            <ul class="feature-list">
+              <li>SEO + CRO compounding loops</li>
+              <li>Content systems for scale</li>
+              <li>Quarterly optimization roadmaps</li>
+            </ul>
+          </div>
+          <div class="feature-media">
+            <img
+              src="https://picsum.photos/seed/igsoft-feature-three/1200/800"
+              alt="Growth analytics and marketing systems"
+              width="1200"
+              height="800"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio" id="work" aria-label="Portfolio">
+        <div class="shell section-heading section-heading-tight">
+          <p class="eyebrow">Selected work</p>
+          <h2>Recent web development &amp; design builds with range, detail, and staying power.</h2>
+        </div>
+
+        <div class="shell portfolio-grid">
+          <article class="portfolio-card portfolio-card-large">
+            <img
+              src="https://picsum.photos/seed/igsoft-portfolio-one/1200/800"
+              alt="Nova Commerce project"
+              width="1200"
+              height="800"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="portfolio-overlay">
+              <span>Nova Commerce</span>
+              <strong>Luxury retail platform redesign</strong>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <img
+              src="https://picsum.photos/seed/igsoft-portfolio-two/800/600"
+              alt="Pulse Analytics project"
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="portfolio-overlay">
+              <span>Pulse Analytics</span>
+              <strong>SaaS dashboard experience</strong>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <img
+              src="https://picsum.photos/seed/igsoft-portfolio-three/800/600"
+              alt="Astra Health project"
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="portfolio-overlay">
+              <span>Astra Health</span>
+              <strong>Growth-focused care platform</strong>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <img
+              src="https://picsum.photos/seed/igsoft-portfolio-four/800/600"
+              alt="Voyager Mobility project"
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="portfolio-overlay">
+              <span>Voyager Mobility</span>
+              <strong>App storytelling launch site</strong>
+            </div>
+          </article>
+
+          <article class="portfolio-card portfolio-card-wide">
+            <img
+              src="https://picsum.photos/seed/igsoft-portfolio-five/1200/800"
+              alt="Atelier Mode project"
+              width="1200"
+              height="800"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="portfolio-overlay">
+              <span>Atelier Mode</span>
+              <strong>Editorial commerce and content system</strong>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="insights" id="insights" aria-label="Why Choose iGsoft">
+        <div class="shell section-heading section-heading-tight">
+          <p class="eyebrow">Why choose us</p>
+          <h2>Why iGsoft? A digital agency where strategy, SEO, and senior-level execution meet.</h2>
+        </div>
+
+        <div class="shell insight-grid">
+          <article class="insight-card">
+            <div class="insight-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14M12 5v14" stroke="currentColor" stroke-width="1.6" />
+              </svg>
+            </div>
+            <h3>Strategy-first thinking</h3>
+            <p>We shape the business narrative before we chase visual novelty.</p>
+          </article>
+
+          <article class="insight-card">
+            <div class="insight-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4.5 12.75 9 17.25 19.5 6.75"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                />
+              </svg>
+            </div>
+            <h3>Execution with polish</h3>
+            <p>Design, front-end craft, and content all ship with the same level of finish.</p>
+          </article>
+
+          <article class="insight-card">
+            <div class="insight-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M6 17.5V6.5m6 11V10m6 7.5v-5"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                />
+              </svg>
+            </div>
+            <h3>Growth built in</h3>
+            <p>Analytics, SEO, and conversion logic are part of the product from the start.</p>
+          </article>
+
+          <article class="insight-card">
+            <div class="insight-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 3.75c2.76 0 5 2.24 5 5 0 1.44-.61 2.73-1.58 3.64-.84.79-1.42 1.82-1.42 2.91V16.5H9V15.3c0-1.09-.58-2.12-1.42-2.91A4.98 4.98 0 0 1 7 8.75c0-2.76 2.24-5 5-5Z"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                />
+                <path d="M9.25 19.5h5.5" stroke="currentColor" stroke-width="1.6" />
+              </svg>
+            </div>
+            <h3>Senior-level collaboration</h3>
+            <p>Fast answers, steady ownership, and clear communication keep ambitious work moving.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="testimonials" id="testimonials" aria-label="Client Testimonials">
+        <div class="shell section-heading section-heading-tight">
+          <p class="eyebrow">Testimonials</p>
+          <h2>Client results: real growth from web development, SEO &amp; design projects.</h2>
+          <p>
+            The best digital work does more than look premium. It drives measurable SEO growth, higher conversions, and teams that feel sharper in front of their customers.
+          </p>
+        </div>
+
+        <div class="shell testimonial-shell">
+          <div class="testimonial-toolbar">
+            <div>
+              <span class="testimonial-label">Client signal</span>
+              <strong id="testimonial-count">01 / 03</strong>
+            </div>
+            <div class="testimonial-progress" aria-hidden="true">
+              <span></span>
+            </div>
+          </div>
+
+          <div class="testimonial-track" aria-live="polite">
+            <article class="testimonial-slide is-active" data-slide="0">
+              <div class="testimonial-copy">
+                <p class="testimonial-quote">
+                  "iGsoft brought strategy, design, and front-end execution into one beautifully
+                  organized process. The launch felt calm, fast, and incredibly polished."
+                </p>
+                <div class="testimonial-meta">
+                  <span class="testimonial-avatar" aria-hidden="true">RK</span>
+                  <div>
+                    <strong>Rhea Kapoor</strong>
+                    <span>Marketing Director, Nova Commerce</span>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-impact">
+                <span>Launch result</span>
+                <strong>48%</strong>
+                <p>increase in demo-qualified traffic after the relaunch.</p>
+                <ul>
+                  <li>New product narrative</li>
+                  <li>Faster campaign pages</li>
+                  <li>Clearer analytics handoff</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="testimonial-slide" data-slide="1">
+              <div class="testimonial-copy">
+                <p class="testimonial-quote">
+                  "They translated a complex product into an experience our buyers instantly
+                  understood. The storytelling and interaction work made a real difference."
+                </p>
+                <div class="testimonial-meta">
+                  <span class="testimonial-avatar" aria-hidden="true">DM</span>
+                  <div>
+                    <strong>Daniel Mercer</strong>
+                    <span>Founder, Pulse Analytics</span>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-impact">
+                <span>Pipeline lift</span>
+                <strong>2.3x</strong>
+                <p>more enterprise leads from product-led landing pages.</p>
+                <ul>
+                  <li>Sharper SaaS positioning</li>
+                  <li>Interactive feature story</li>
+                  <li>Reduced buyer confusion</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="testimonial-slide" data-slide="2">
+              <div class="testimonial-copy">
+                <p class="testimonial-quote">
+                  "From SEO structure to premium motion, every decision felt intentional. The team
+                  moved like senior partners, not just vendors."
+                </p>
+                <div class="testimonial-meta">
+                  <span class="testimonial-avatar" aria-hidden="true">MS</span>
+                  <div>
+                    <strong>Mina Shah</strong>
+                    <span>Head of Growth, Atelier Mode</span>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-impact">
+                <span>Organic growth</span>
+                <strong>71%</strong>
+                <p>more non-branded search visits after content restructuring.</p>
+                <ul>
+                  <li>SEO architecture</li>
+                  <li>Editorial commerce UX</li>
+                  <li>Reputation signals</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <div class="testimonial-controls">
+            <button class="slider-button" type="button" data-direction="prev" aria-label="Previous testimonial">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15 5 8 12l7 7" />
+              </svg>
+            </button>
+            <div class="slider-dots" aria-label="Testimonial navigation">
+              <button class="slider-dot is-active" type="button" data-index="0" aria-label="Go to testimonial 1"></button>
+              <button class="slider-dot" type="button" data-index="1" aria-label="Go to testimonial 2"></button>
+              <button class="slider-dot" type="button" data-index="2" aria-label="Go to testimonial 3"></button>
+            </div>
+            <button class="slider-button" type="button" data-direction="next" aria-label="Next testimonial">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m9 5 7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-label="Contact iGsoft">
+        <div class="shell contact-layout">
+          <div class="contact-copy">
+            <p class="eyebrow">Contact</p>
+            <h2>Start your web development or SEO project with iGsoft today.</h2>
+            <p>
+              Bring the brief, the product, or the messy middle. Our digital agency team will turn it into a clearer,
+              sharper, more memorable experience.
+            </p>
+            <div class="contact-cards">
+              <div class="contact-card">
+                <span>Email</span>
+                <address><a href="mailto:hello@igsoft.studio" style="color:inherit;text-decoration:none;"><strong>hello@igsoft.studio</strong></a></address>
+              </div>
+              <div class="contact-card">
+                <span>Availability</span>
+                <strong>Q2 partnerships and launch sprints</strong>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" aria-label="Contact form" novalidate>
+            <div class="field">
+              <input id="name" name="name" type="text" placeholder=" " required />
+              <label for="name">Name</label>
+            </div>
+            <div class="field">
+              <input id="email" name="email" type="email" placeholder=" " required />
+              <label for="email">Email</label>
+            </div>
+            <div class="field">
+              <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+              <label for="message">Message</label>
+            </div>
+            <button class="button button-primary contact-submit" type="submit">Send Inquiry</button>
+            <p class="form-note" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="shell footer-layout">
+        <div>
+          <a class="brand footer-brand" href="#hero" aria-label="iGsoft — Back to top">
+            <img src="ig-logo.png" alt="iGsoft Digital Agency" class="brand-logo" width="100" height="50" />
+          </a>
+          <p class="footer-copy">iGsoft — Premium web development, SEO services, UI/UX design &amp; app development agency.</p>
+          <p class="footer-copy" style="margin-top:8px;font-size:0.82rem;">&copy; <span id="footer-year"></span> iGsoft. All rights reserved.</p>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#services">Services</a>
+          <a href="#work">Portfolio</a>
+          <a href="#contact">Contact</a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="proj-modal" id="leadPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle" aria-hidden="true">
+      <div class="proj-modal-backdrop" id="popupBackdrop"></div>
+      <div class="proj-modal-box">
+
+        <!-- corner glow orbs -->
+        <div class="proj-orb proj-orb-1" aria-hidden="true"></div>
+        <div class="proj-orb proj-orb-2" aria-hidden="true"></div>
+
+        <button class="proj-modal-close" id="popupClose" aria-label="Close">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+
+        <div class="proj-modal-grid">
+          <!-- LEFT: info panel -->
+          <div class="proj-modal-info">
+            <p class="proj-modal-eyebrow">
+              <span class="proj-dot"></span> New Project Request
+            </p>
+            <h2 id="popupTitle" class="proj-modal-title">Let's build something remarkable</h2>
+            <p class="proj-modal-desc">Tell us what you're building — we'll respond within 24 hours with a clear plan.</p>
+
+            <ul class="proj-modal-perks">
+              <li>
+                <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="#2997ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Free strategy consultation
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="#2997ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                No commitment required
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="#2997ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Response within 24 hours
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="#2997ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Senior team, not juniors
+              </li>
+            </ul>
+
+            <div class="proj-modal-stack">
+              <span>React</span><span>Next.js</span><span>Node</span><span>AWS</span><span>Figma</span>
+            </div>
+          </div>
+
+          <!-- RIGHT: form -->
+          <form class="proj-modal-form" id="leadForm" novalidate>
+            <div class="proj-field-row">
+              <div class="proj-field" id="field-name">
+                <label for="popup-name">Full Name <span aria-hidden="true">*</span></label>
+                <input id="popup-name" name="name" type="text" placeholder="John Doe" required autocomplete="name" />
+                <span class="proj-field-error" role="alert">Please enter your name.</span>
+              </div>
+              <div class="proj-field" id="field-email">
+                <label for="popup-email">Email <span aria-hidden="true">*</span></label>
+                <input id="popup-email" name="email" type="email" placeholder="you@company.com" required autocomplete="email" />
+                <span class="proj-field-error" role="alert">Please enter a valid email.</span>
+              </div>
+            </div>
+            <div class="proj-field-row">
+              <div class="proj-field">
+                <label for="popup-phone">Phone</label>
+                <input id="popup-phone" name="phone" type="tel" placeholder="+91 00000 00000" autocomplete="tel" />
+              </div>
+              <div class="proj-field">
+                <label for="popup-budget">Budget Range</label>
+                <select id="popup-budget" name="budget">
+                  <option value="">Select range</option>
+                  <option value="under-50k">Under ₹50K</option>
+                  <option value="50k-2l">₹50K – ₹2L</option>
+                  <option value="2l-5l">₹2L – ₹5L</option>
+                  <option value="5l-plus">₹5L+</option>
+                </select>
+              </div>
+            </div>
+            <div class="proj-field">
+              <label for="popup-service">Service Needed</label>
+              <select id="popup-service" name="service">
+                <option value="">Choose a service</option>
+                <option value="web-development">Web Development</option>
+                <option value="app-development">App Development</option>
+                <option value="ui-ux-design">UI/UX Design</option>
+                <option value="seo-services">SEO Services</option>
+                <option value="automation-crm">Automation/CRM</option>
+                <option value="full-package">Full Digital Package</option>
+              </select>
+            </div>
+            <div class="proj-field">
+              <label for="popup-message">Project Brief</label>
+              <textarea id="popup-message" name="message" rows="4" placeholder="Describe your project, goals, and timeline..."></textarea>
+            </div>
+            <button class="proj-submit" type="submit" id="leadSubmitBtn">
+              <span class="proj-submit-text">Send Project Request</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <p class="proj-note" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha256-/4RJyaB7/bfOBGXNEJHKgFBBFNjJFBBFNjJFBBFNjJF=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+
+  </body>
+</html>
